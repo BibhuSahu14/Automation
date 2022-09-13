@@ -1,0 +1,4 @@
+2022-09-13 15:56:51,355  INFO [main] TestBase:71 - Running Test class: TestCase_1
+2022-09-13 15:56:56,645  INFO [main] TestBase:71 - chrome   105.0.5195.102
+2022-09-13 15:56:57,226  INFO [main] TestBase:71 - Test Started--verifySortedPrice
+2022-09-13 15:56:57,277  INFO [main] TestBase:71 - Login URL: https://www.flipkart.com/

@@ -1,0 +1,19 @@
+{
+	"qa": {
+		"chrome": {
+			"product": "Electronics"
+		},
+		"firefox": {
+		},
+		"edge": {
+		}
+	},
+	"staging": {
+		"chrome": {
+		},
+		"firefox": {
+		},
+		"edge": {
+		}
+	}
+}

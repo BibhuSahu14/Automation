@@ -1,0 +1,20 @@
+{
+	"qa": {
+		"chrome": {
+			"userName": "sampleUsername",
+			"password": "samplePassword"
+		},
+		"firefox": {
+		},
+		"edge": {
+		}
+	},
+	"staging": {
+		"chrome": {
+		},
+		"firefox": {
+		},
+		"edge": {
+		}
+	}
+}
