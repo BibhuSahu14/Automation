@@ -2,11 +2,10 @@ package com.qa.testcases;
 
 import static org.testng.Assert.assertEquals;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.time.Duration;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -14,12 +13,14 @@ import org.testng.annotations.Test;
 
 import com.qa.base.TestBase;
 import com.qa.pages.FlipkartHomePage;
+import com.qa.pages.FlipkartLoginPage;
 import com.qa.pages.SearchedPage;
 import com.qa.util.JsonReader;
 
-public class TestCase_1 extends TestBase{
-	
+public class TestCase_2 extends TestBase {
+
 	FlipkartHomePage FlipkartHomePageobj;
+	FlipkartLoginPage FlipkartLoginPageobj;
 	SearchedPage SearchedPageobj;
 	
 	@BeforeClass
@@ -36,21 +37,24 @@ public class TestCase_1 extends TestBase{
 	}
 	
 	@Test
-	public void verifySortedPrice()
+	public void addToCart()
 	{
-		reportLog("Test Started--verifySortedPrice");
+		reportLog("Test Started--Searching product and add first product to the cart");
 		FlipkartHomePageobj=new FlipkartHomePage();
-		SearchedPageobj=new SearchedPage();
 		FlipkartHomePageobj.navigateToFlipkartHomePage();
+		FlipkartLoginPageobj=new FlipkartLoginPage();
+		FlipkartLoginPageobj.login(testData.getString("userName"), testData.getString("password"));
 		FlipkartHomePageobj.searchProduct(testData.getString("product"));
-		ArrayList al=(ArrayList) SearchedPageobj.getFirst5ProductNameandPrice();
-		ArrayList sortedal=al;
-		Collections.sort(sortedal);
-		assertEquals(al, sortedal);
+		SearchedPageobj=new SearchedPage();
+		String actualCartPageTitle=SearchedPageobj.clickFirstSearchesproduct();
+		String expectedCartPageTitle="Shopping Cart | Flipkart.com";
+		assertEquals(actualCartPageTitle,expectedCartPageTitle);
 	}
 	@AfterMethod
 	public void closeWindow()
 	{
-		getdriver().close();
+		getdriver().quit();
 	}
+	
+	
 }

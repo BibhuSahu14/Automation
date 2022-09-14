@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\Automation\samplePOMFramework"/>
 			<item value="C:\Users\bibhuprasads\Downloads\samplePOMFramework"/>
 		</list>
 		<list key="projectNameTemplate">

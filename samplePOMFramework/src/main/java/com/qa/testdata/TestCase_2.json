@@ -1,0 +1,21 @@
+{
+	"qa": {
+		"chrome": {
+			"userName": "8986753825",
+			"password": "Bibhusahu@098",
+			"product" : "Mobile"
+		},
+		"firefox": {
+		},
+		"edge": {
+		}
+	},
+	"staging": {
+		"chrome": {
+		},
+		"firefox": {
+		},
+		"edge": {
+		}
+	}
+}
