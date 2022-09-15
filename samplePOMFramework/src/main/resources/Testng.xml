@@ -10,7 +10,8 @@
 	<test name="Sample Tests">
 
 		<classes>
-			<class name="com.qa.testcases.sampleTestClass" />
+			<class name="com.qa.testcases.TestCase_1" />
+			<class name="com.qa.testcases.TestCase_2"/>
 		</classes>
 	</test>
 
