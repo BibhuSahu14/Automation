@@ -52,6 +52,6 @@ public class TestCase_1 extends TestBase{
 	@AfterMethod
 	public void closeWindow()
 	{
-		getdriver().close();
+		getdriver().quit();
 	}
 }
