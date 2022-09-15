@@ -42,6 +42,7 @@ public class TestCase_1 extends TestBase{
 		FlipkartHomePageobj=new FlipkartHomePage();
 		SearchedPageobj=new SearchedPage();
 		FlipkartHomePageobj.navigateToFlipkartHomePage();
+		FlipkartHomePageobj.closeLoginPopup();
 		FlipkartHomePageobj.searchProduct(testData.getString("product"));
 		ArrayList al=(ArrayList) SearchedPageobj.getFirst5ProductNameandPrice();
 		ArrayList sortedal=al;

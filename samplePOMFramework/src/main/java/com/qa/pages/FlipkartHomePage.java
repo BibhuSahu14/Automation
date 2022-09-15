@@ -16,6 +16,9 @@ public class FlipkartHomePage extends TestBase {
 	@FindBy(className="_3704LK")
 	WebElement searchBar;
 	
+	@FindBy(xpath="//button[@class='_2KpZ6l _2doB4z']")
+	WebElement close;
+	
 	WebDriverWait wait;
 	
 	public FlipkartHomePage() {
@@ -33,6 +36,11 @@ public class FlipkartHomePage extends TestBase {
 		wait=new WebDriverWait(getdriver(),Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(searchBar));
 		searchBar.sendKeys(product,Keys.ENTER);
+	}
+	
+	public void closeLoginPopup() 
+	{
+		close.click();
 	}
 	
 	

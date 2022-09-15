@@ -41,6 +41,12 @@ public class SearchedPage extends TestBase {
 	
 	public void clickPriceLowToHigh()
 	{
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		lowToHigh.click();
 	}
 	public ArrayList getFirst5ProductNameandPrice()
